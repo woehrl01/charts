@@ -253,14 +253,14 @@ As an alternative, this chart supports using an initContainer to change the owne
 
 ### SonarQube&trade; Image parameters
 
-| Name                | Description                                                                                                      | Value                       |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| `image.registry`    | SonarQube&trade; image registry                                                                                  | `REGISTRY_NAME`             |
-| `image.repository`  | SonarQube&trade; image repository                                                                                | `REPOSITORY_NAME/sonarqube` |
-| `image.digest`      | SonarQube&trade; image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag | `""`                        |
-| `image.pullPolicy`  | SonarQube&trade; image pull policy                                                                               | `IfNotPresent`              |
-| `image.pullSecrets` | SonarQube&trade; image pull secrets                                                                              | `[]`                        |
-| `image.debug`       | Enable SonarQube&trade; image debug mode                                                                         | `false`                     |
+| Name                | Description                                                                                                      | Value                                                                     |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `image.registry`    | SonarQube&trade; image registry                                                                                  | `REGISTRY_NAME`                                                           |
+| `image.repository`  | SonarQube&trade; image repository                                                                                | `REPOSITORY_NAME/sonarqube`                                               |
+| `image.digest`      | SonarQube&trade; image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag | `sha256:fcd17ace70f7043ded1a0aefed2f8c38036f3f7870d5e4bc6ebb6b7e4727ec2f` |
+| `image.pullPolicy`  | SonarQube&trade; image pull policy                                                                               | `IfNotPresent`                                                            |
+| `image.pullSecrets` | SonarQube&trade; image pull secrets                                                                              | `[]`                                                                      |
+| `image.debug`       | Enable SonarQube&trade; image debug mode                                                                         | `false`                                                                   |
 
 ### SonarQube&trade; Configuration parameters
 
@@ -275,7 +275,7 @@ As an alternative, this chart supports using an initContainer to change the owne
 | `maxHeapSize`                 | Maximum heap size for SonarQube&trade;                                                                                                                                      | `2048m`                                                  |
 | `jvmOpts`                     | Values to add to SONARQUBE_WEB_JAVA_ADD_OPTS                                                                                                                                | `""`                                                     |
 | `jvmCeOpts`                   | Values to add to SONAR_CE_JAVAADDITIONALOPTS                                                                                                                                | `""`                                                     |
-| `startTimeout`                | Timeout for the application to start in seconds                                                                                                                             | `150`                                                    |
+| `startTimeout`                | Timeout for the application to start in seconds                                                                                                                             | `300`                                                    |
 | `extraProperties`             | List of extra properties to be set in the sonar.properties file (key=value format)                                                                                          | `[]`                                                     |
 | `sonarqubeSkipInstall`        | Skip wizard installation                                                                                                                                                    | `false`                                                  |
 | `sonarSecurityRealm`          | Set this to LDAP authenticate first against the external sytem. If the external system is not                                                                               | `""`                                                     |
