@@ -81,9 +81,11 @@ diagnosticMode:
 ##
 image:
   registry: docker.io
-  repository: bitnami/sonarqube
-  tag: 10.6.0-debian-12-r1
-  digest: ""
+  #repository: bitnami/sonarqube
+  #tag: 10.6.0-debian-12-r2
+  repository: jotamartos630/testing
+  tag: sonarqube
+  digest: "sha256:fcd17ace70f7043ded1a0aefed2f8c38036f3f7870d5e4bc6ebb6b7e4727ec2f"
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
@@ -135,7 +137,7 @@ jvmOpts: ""
 jvmCeOpts: ""
 ## @param startTimeout Timeout for the application to start in seconds
 ##
-startTimeout: 150
+startTimeout: 300
 ## @param extraProperties List of extra properties to be set in the sonar.properties file (key=value format)
 ## e.g:
 ## extraProperties:
